@@ -93,7 +93,7 @@ const List = forwardRef((props,ref) =>{
           My name is   <h1 style={{letterSpacing:0,display:'inline',fontWeight:'bolder'}}>Miguel,</h1> <br /> 
          <span style={{fontWeight:400}}> I'm a web developer </span>  and this is my portfolio <b> ;) </b>
         </h2>
-        <a href="#second-div">
+        <a href="#second-div"> 
           <AnimatedButton size='lg' colorScheme="blue">
             Find out more
           </AnimatedButton>
