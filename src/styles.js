@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components'
 import { keyframes } from 'styled-components'
 import backgroundImage  from './assets/img/background.png'
 
-const sideBarBg = '#003f72'
+const sideBarBg = '#190f77'
 export const LayoutContainer = styled.div`
   display:flex;
   justify-content:flex-start;
@@ -40,6 +40,7 @@ export const WelcomeDiv = styled.div`
   /* background-position: 0 -105px; */
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  
   `
   
   const bounce = (height) => keyframes`
@@ -75,10 +76,22 @@ export const AnimatedCircle = styled.div`
 export const ColorDiv = styled.div`
   /* margin-top: 100vh; */
   position: relative;
+  
   z-index: 1;
   width: 100%;
+  color:white;
+  padding: ${props => props.padding } ;
   height: ${(props)=> props.height ? props.height : '500px'};
   background: ${props => props.background ? props.background : '#729efd' };
+  font-family:"Montserrat";
+  h1, h2, h3, h4, h5, h6 {
+  font-size: revert;
+  font-weight: revert;
+  }
+
+  h1{
+    font-weight:400;
+  }
 `
 
   export const HelloDiv = styled.div`
@@ -192,7 +205,7 @@ export const SideMenuOptions = styled.a`
     height:5px;
     width:100%;
     border-radius:2px;
-    background:linear-gradient(80deg,#59c3ef 18%,#3d79be 88%);
+    background:linear-gradient(80deg,#3bbcff 18%,#3925ff 88%);
     display:block;
     position: relative;
     top: 36px;

@@ -1,4 +1,5 @@
 import React,{useRef, forwardRef,useImperativeHandle} from 'react'
+import {Flex, Text, Grid, GridItem} from '@chakra-ui/react'
 import { ListContainer, WelcomeDiv,AnimatedCircle, ColorDiv, HelloDiv, Footer, AnimatedButton } from '../../styles';
 const List = forwardRef((props,ref) =>{
 
@@ -90,7 +91,7 @@ const List = forwardRef((props,ref) =>{
           Hello!,
         </h1>
         <h2>
-          My name is   <h1 style={{letterSpacing:0,display:'inline',fontWeight:'bolder'}}>Miguel,</h1> <br /> 
+          My name is   <span style={{letterSpacing:0,display:'inline',fontWeight:'bolder'}}>Miguel,</span> <br /> 
          <span style={{fontWeight:400}}> I'm a web developer </span>  and this is my portfolio <b> ;) </b>
         </h2>
         <a href="#second-div"> 
@@ -102,8 +103,29 @@ const List = forwardRef((props,ref) =>{
       {array.map((props,index) => <AnimatedCircle key={index} {...props}/>)}
       <WelcomeDiv/>
       <div style={{height:"100vh"}} id="first-div" ref={ref1}></div>
-      <ColorDiv id="second-div" ref={ref2} background="dodgerblue"/> 
-      <ColorDiv id="third-div" ref={ref3} height="700px" background="salmon"/> 
+      <ColorDiv id="second-div" ref={ref2} background="linear-gradient(0deg,rgb(57 37 255) ,rgb(0 114 209) 55%, rgb(0 114 209 / 0%) 93%);">
+      <Flex justifyContent="flex-end" flexDirection="column" w="100%" height="100%">
+        <Text align="center" fontSize="3xl" padding="50px">
+          &nbsp; I'm a Junior developer who likes to create <b> simple, easy </b> to implement solutions while learning new things. 
+          <br /> I have <b>experience</b> developing apps on React, Angular and ExpressJs using the REST architecture.
+          <br /> 
+          <br />  Always looking forwards to the next challenge!  
+        </Text>
+      </Flex>
+      </ColorDiv>
+      <ColorDiv id="third-div" ref={ref3} height="fit-content" padding="50px" background="rgb(57 37 255)">
+        <Text textAlign="start" fontSize="4xl"> 
+          Projects
+        </Text>
+        <Grid templateColumns="repeat(6,1fr)" mt="30px" bg="white" border="2px white solid" borderRadius="3px" gap="2px">
+          <GridItem w='100%' h='200' bg='blue.500' colSpan="2" />
+          <GridItem w='100%' h='200' bg='red.500'  colSpan="4"/>
+          <GridItem w='100%' h='400' bg='blue.500'  colSpan="2"/>
+          <GridItem w='100%' h='400' bg='red.500'  colSpan="4"/>
+          <GridItem w='100%' h='400' bg='blue.500'  colSpan="2"/>
+          <GridItem w='100%' h='400' bg='red.500'  colSpan="4"/>
+        </Grid>
+      </ColorDiv>
       <ColorDiv id="fourth-div" ref={ref4} height="700px" background="darkcyan"/> 
       <Footer/>
     </ListContainer>
