@@ -2,45 +2,63 @@ import { Button } from '@chakra-ui/react'
 import styled, {css} from 'styled-components'
 import { keyframes } from 'styled-components'
 import backgroundImage  from './assets/img/background.png'
+import polygon from './assets/img/polygon.svg'
 
-const sideBarBg = '#190f77'
+const sideBarBg = '#000331'
+
 export const LayoutContainer = styled.div`
-  display:flex;
-  justify-content:flex-start;
-  width:100%;
-  height:100vh;
+    height: 100%;
+    width: 100%;
 `
 
 export const SideBarContainer = styled.div`
-  height:100%;
-  width:100%;
-  max-width:350px;
-  background-color:${sideBarBg};
   position: fixed;
-  top: 0;
-  left: 0;
+  flex:none;
+  height:100vh;
+  /* width:100%; */
+  width:350px;
+  background-color:${sideBarBg};
+  top: 0; 
+  left:0;
   z-index:10;
+  @media (max-width:1250px){
+    width:100%;
+    height:53px;
+    font-size:medium;
+  }
+
+  @media (max-width:650px){
+    display:none;
+  }
 `
 
 export const ListContainer = styled.div` 
-  height: 1000px;
+  height: fit-content;
   width:100%;
   margin-left:350px;
+  max-width: calc(100% - 350px);
+  @media (max-width:1250px){
+    max-width:100%;
+    margin-left:0;
+  }
+
 `
 
 export const WelcomeDiv = styled.div`
-  width:100%;
+  width:calc(100% - 350px);
+  /* max-width: calc(1360px - 350px); */
   position:fixed;
   top:0;
   background-position:center ;
   min-height:100vh;
-  background-color:#0072d1;
-  background-image:url(${backgroundImage});
+  background-image:url(${polygon});
   background-size: cover;
   /* background-position: 0 -105px; */
   background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  
+  background-blend-mode: overlay; 
+  @media (max-width:1250px){
+    width:100%;
+  }
   `
   
   const bounce = (height) => keyframes`
@@ -76,12 +94,12 @@ export const AnimatedCircle = styled.div`
 export const ColorDiv = styled.div`
   /* margin-top: 100vh; */
   position: relative;
-  
+  height:fit-content;
   z-index: 1;
   width: 100%;
   color:white;
   padding: ${props => props.padding } ;
-  height: ${(props)=> props.height ? props.height : '500px'};
+  /* height: ${(props)=> props.height ? props.height : '500px'}; */
   background: ${props => props.background ? props.background : '#729efd' };
   font-family:"Montserrat";
   h1, h2, h3, h4, h5, h6 {
@@ -95,16 +113,16 @@ export const ColorDiv = styled.div`
 `
 
   export const HelloDiv = styled.div`
-  position: fixed;
-  z-index: 1;
-  width:100%; 
+  position: absolute;
+
+  overflow-wrap: break-word;
   height:100px;
-  bottom: 50%; 
+  bottom: 60%; 
   padding-left: 120px;
   color: white;
   & h1{
     font-size:xxx-large;
-    font-weight: lighter;
+    font-weight: bolder;
     margin: 0;
     letter-spacing: 5px;
     ${() => entranceAnimation({delay:1})};
@@ -112,25 +130,32 @@ export const ColorDiv = styled.div`
   & h2{
     font-size:xx-large;
     margin: 0;
-    font-weight: lighter;
-    margin-top: -16px;
-    margin-left: 33px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-left: 30px;
     line-height: 50px;
     ${() => entranceAnimation({delay:2})};
+  }
+
+  @media (max-width:1250px){
+    padding-left:35px;
   }
 `
 export const AnimatedButton = styled(Button)`
   margin-top:10px;
-  background:${sideBarBg} !important;
-  font-weight: lighter !important; 
-   ${() => entranceAnimation({delay:3})};
+  /* background:#FFF7D6 !important;
+  font-weight: bol !important;  */
+   ${() => entranceAnimation({delay:3})}
 `
 
   export const Footer = styled.div`
-    height:300px;
+    height:200px;
     background:indigo;
     z-index: 2;
+    line-height:200px;
     position: relative;
+    text-align:left;
+    padding:0px 80px ;
   `
 
   export const SideMenuContainer = styled.div`
@@ -141,6 +166,12 @@ export const AnimatedButton = styled(Button)`
     position: relative;
     font-size: larger;
     color: white;
+    @media (max-width:1250px){
+    flex-direction:row;
+    top:0;
+    justify-content:center;
+  }
+
   `
 
 
@@ -171,7 +202,7 @@ const entrance = keyframes`
 ` 
 
 const entranceAnimation = ({delay}) => css`
-  animation:${entrance} ${delay}s forwards
+  animation:${entrance} ${delay}s forwards;
 `
 
 export const SideMenuOptions = styled.a` 
@@ -179,19 +210,19 @@ export const SideMenuOptions = styled.a`
   margin: 10px;
   text-decoration:none;
   text-align:end;
-  color:white;
+  transition: color 0.5s;
+  color:${props => props.selected ? 'white' : '#bbbbbb'};
   padding: 0 20px;
   width:85%;
   font-weight:400; 
   letter-spacing: 5px;
   font-size:smaller;
   ${props => entranceAnimation(props)};
-   
-
+  
   &::after{
     content: '';
-    top: 7px;
-    height:10px;
+    top: 0px;
+    height:16px;
     width:100%;
     background-color:${sideBarBg};
     display:block;
@@ -199,19 +230,41 @@ export const SideMenuOptions = styled.a`
     ${props => props.selected && animation};
     
   }
-
+  
   &::before{
     content: '';
     height:5px;
     width:100%;
     border-radius:2px;
-    background:linear-gradient(80deg,#3bbcff 18%,#3925ff 88%);
+    background:linear-gradient(80deg,#ce2858 18%,#46285d 88%);
     display:block;
     position: relative;
     top: 36px;
+    /* @media (max-width:1250px){
+      
+      border-radius:0px;
+      
+    } */
+    
+    
   }
-`
-export const UnderBar = styled.div`
+  @media (max-width:1250px){
+    animation:none;
+    width:fit-content;
+    font-size:small;
+    &::before{
+      border-radius:0px;
+      height: 4px;
+    }
+
+    &::after{
+      border-radius:0px;
+      height:16px
+   
+    }
+  }
+  `
+  export const UnderBar = styled.div`
   top: 7px;
   height:5px;
   width:100%;

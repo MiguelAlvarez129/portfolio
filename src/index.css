@@ -6,7 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  background:#000331 !important;
 }
 
 code {
@@ -23,7 +24,14 @@ html {
   src: url(./assets/fonts/Montserrat/Montserrat.ttf);
 }
 
-h1,h2,h3{
-  font-family: 'Montserrat';
+
+@font-face {
+  font-family: "Libre Franklin";
+  src: url(./assets/fonts/LibreFranklin/LibreFranklin.ttf);
+}
+
+
+h1,h2,h3,p{
+  font-family: 'Libre Franklin';
 }
 
