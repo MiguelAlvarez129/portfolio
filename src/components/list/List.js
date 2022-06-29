@@ -122,7 +122,7 @@ const List = forwardRef((props,ref) =>{
       </ColorDiv>
       <Footer>
         <p style={{color:"#cf8eff"}}>
-        Images: <a href="https://haikei.app/"> haikei.app</a> | Design: Myself
+        Images: <a href="https://haikei.app/"> haikei.app</a> &nbsp; | &nbsp;  Design: Myself
         </p> 
       </Footer>
     </ListContainer>
