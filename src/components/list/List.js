@@ -88,7 +88,7 @@ const List = forwardRef((props,ref) =>{
   return (
     <ListContainer> 
       <Welcome ref={ref1}/> 
-      <ColorDiv id="second-div" ref={ref2} background='transparent' height="400px">
+      <ColorDiv id="second-div" ref={ref2} background='#000331' height="400px">
         <Flex justifyContent="flex-end" flexDirection="column" w="100%" height="100%">
           <Text align="center" fontSize="3xl" padding="50px" fontFamily="Libre Franklin">
             &nbsp; I'm a junior developer who likes to create <b> simple, easy </b> to implement solutions while learning new things. 
@@ -102,7 +102,7 @@ const List = forwardRef((props,ref) =>{
         <Text textAlign="start" fontSize="4xl" > 
           Projects
         </Text>
-        <Grid templateColumns="repeat(6,1fr)" mt="30px" bg="#ffbdc2" border="2px #ffbdc2 solid" borderRadius="3px" gap="2px">
+        {/* <Grid templateColumns="repeat(6,1fr)" mt="30px" bg="#ffbdc2" border="2px #ffbdc2 solid" borderRadius="3px" gap="2px">
           <GridItem w='100%' h='200' bg='blue.500' colSpan="2">
 
           </GridItem>
@@ -115,7 +115,7 @@ const List = forwardRef((props,ref) =>{
           <GridItem w='100%' h='400' bg='red.500'  colSpan="4"/>
           <GridItem w='100%' h='400' bg='blue.500'  colSpan="2"/>
           <GridItem w='100%' h='400' bg='red.500'  colSpan="4"/>
-        </Grid>
+        </Grid> */}
       </ColorDiv>
       <ColorDiv id="fourth-div" ref={ref4} height="800px" background="darkcyan">
         jajaja

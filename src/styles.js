@@ -1,8 +1,7 @@
 import { Button } from '@chakra-ui/react'
 import styled, {css} from 'styled-components'
 import { keyframes } from 'styled-components'
-import backgroundImage  from './assets/img/background.png'
-import polygon from './assets/img/polygon.svg'
+
 
 const sideBarBg = '#000331'
 
@@ -51,7 +50,7 @@ export const WelcomeDiv = styled.div`
   top:0;
   background-position:center ;
   min-height:100vh;
-  background-image:url(${polygon});
+
   background-size: cover;
   /* background-position: 0 -105px; */
   background-repeat: no-repeat;
@@ -145,6 +144,16 @@ export const AnimatedButton = styled(Button)`
   margin-top:10px;
   /* background:#FFF7D6 !important;
   font-weight: bol !important;  */
+  border-bottom: 6px solid white !important;
+  transition: box-shadow .2s !important;
+  &:active{
+    transform: translateY(5px) !important;
+    border-bottom: 1.5px solid white!important;
+  }
+  &:focus{
+    outline:0 !important;
+    box-shadow: none !important;
+  }
    ${() => entranceAnimation({delay:3})}
 `
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-1.774 -11.233 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="281.892" y1="98.451" x2="281.892" y2="227.921" id="gradient-1" gradientTransform="matrix(0.999952, 0.010098, -0.013697, 1.448497, -38.437428, -116.709745)">
+      <stop offset="0" style="stop-color: rgb(255, 221, 0);"/>
+      <stop offset="0.565" style="stop-color: rgb(250, 147, 58);"/>
+      <stop offset="1" style="stop-color: rgb(244, 11, 65);"/>
+    </linearGradient>
+  </defs>
+  <rect x="129.765" y="18.327" width="229.383" height="240.021" style="stroke-miterlimit: 1; stroke-dashoffset: 3px; stroke-width: 0px; stroke: rgb(77, 33, 255); paint-order: fill; fill: rgb(0, 3, 49);" rx="252.143" ry="252.143"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: url(#gradient-1); paint-order: fill; stroke-width: 0px;" cx="242.684" cy="124.343" rx="101.685" ry="96.823"/>
+  <rect x="164.056" y="206.866" width="169.081" height="9.532" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="161.395" y="193.838" width="169.081" height="7.685" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="151.64" y="181.052" width="180.314" height="7.094" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="140.112" y="167.095" width="205.144" height="6.554" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="138.338" y="155.631" width="205.144" height="5.321" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="138.93" y="141.442" width="205.144" height="4.729" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="139.521" y="91.723" width="209.874" height="2.978" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="140.112" y="105.677" width="205.144" height="3.547" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="138.339" y="117.5" width="205.144" height="3.547" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+  <rect x="138.339" y="129.914" width="205.144" height="3.547" style="stroke-miterlimit: 1; stroke-width: 0px; stroke: rgb(197, 49, 49); fill: rgb(0, 3, 49);"/>
+</svg>
