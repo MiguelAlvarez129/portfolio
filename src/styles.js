@@ -5,7 +5,7 @@ import zigzag from '../src/assets/img/zig-zag.svg'
 
 
 const sideBarBg = '#0E3155'
-
+const sidebarW = '300px'
 export const LayoutContainer = styled.div`
     height: 100%;
     width: 100%;
@@ -16,7 +16,7 @@ export const SideBarContainer = styled.div`
   flex:none;
   height:100vh;
   /* width:100%; */
-  width:350px;
+  width:${sidebarW};
   background-color:${sideBarBg};
   top: 0; 
   left:0;
@@ -35,8 +35,8 @@ export const SideBarContainer = styled.div`
 export const ListContainer = styled.div` 
   height: fit-content;
   width:100%;
-  margin-left:350px;
-  max-width: calc(100% - 350px);
+  margin-left:${sidebarW};
+  max-width: calc(100% - ${sidebarW});
   @media (max-width:1250px){
     max-width:100%;
     margin-left:0;
@@ -282,7 +282,7 @@ export const SideMenuOptions = styled.a`
 `
 
 export const TextShadow = styled.span`
-  font-size: 70px;
+  font-size: 64px;
   &:after{
     content:'${props => props.content}';
     background-image:url(${zigzag});
