@@ -1,9 +1,10 @@
 import { Button } from '@chakra-ui/react'
 import styled, {css} from 'styled-components'
 import { keyframes } from 'styled-components'
+import zigzag from '../src/assets/img/zig-zag.svg'
 
 
-const sideBarBg = '#000331'
+const sideBarBg = '#0E3155'
 
 export const LayoutContainer = styled.div`
     height: 100%;
@@ -201,12 +202,12 @@ const animation = css`
 const entrance = keyframes`
   from { 
     transform:translatey(100px);
-    opacity:0 
+    opacity:0 ;
   } 
 
   to {
     transform:translatey(0);
-    opacity:1 
+    opacity:1;
   }
 ` 
 
@@ -245,7 +246,7 @@ export const SideMenuOptions = styled.a`
     height:5px;
     width:100%;
     border-radius:2px;
-    background:linear-gradient(80deg,#ce2858 18%,#46285d 88%);
+    background:#ce2858;
     display:block;
     position: relative;
     top: 36px;
@@ -268,7 +269,7 @@ export const SideMenuOptions = styled.a`
 
     &::after{
       border-radius:0px;
-      height:16px
+      height:16px;
    
     }
   }
@@ -279,3 +280,20 @@ export const SideMenuOptions = styled.a`
   width:100%;
   border-radius:2px;
 `
+
+export const TextShadow = styled.span`
+  font-size: 70px;
+  &:after{
+    content:'${props => props.content}';
+    background-image:url(${zigzag});
+    color: transparent;
+    -webkit-background-clip:text;
+    background-clip:text;
+    display:inline-block;
+    right: calc(5ch + 7px);
+    position: relative;
+    z-index:-1
+  }
+
+`
+
