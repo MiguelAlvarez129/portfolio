@@ -3,7 +3,7 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 import { AnimatedButton, HelloDiv, TextShadow } from '../../styles';
 import sun from '../../assets/img/sun.svg'
 import Wave from 'react-wavify'
-import {VStack, Text, Grid, GridItem, Heading} from '@chakra-ui/react'
+import {VStack, Spacer , Grid, GridItem, Heading} from '@chakra-ui/react'
 import bg from '../../assets/img/bg.svg'
 import zigzag from '../../assets/img/zig-zag.svg'
 
@@ -11,12 +11,12 @@ import zigzag from '../../assets/img/zig-zag.svg'
 const Welcome = forwardRef((props,ref) =>{
 
   return (
-    <div  id="first-div" ref={ref} style={{bg:'#000331',height:'100vh'}} >
+    <div id="first-div" ref={ref} style={{bg:'#000331',height:'100vh'}} >
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
               <Heading fontSize={'clamp(3rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>
-              Hello! 
+              Hello!
               </Heading>
             </GridItem>
             <GridItem colStart={1} rowStart={1}>
@@ -26,13 +26,16 @@ const Welcome = forwardRef((props,ref) =>{
             </GridItem>
           </Grid>
           
-          <Heading fontSize={'clamp(2rem,3vw,3rem)'} color={'#70adff'}>
-          My name is Miguel Alvarez
+          <Heading fontSize={'clamp(3rem,3vw,3rem)'} color={'#add0ff96'}>
+          My name is Miguel Alvarez,
           </Heading>
-          <Heading fontSize={'clamp(2rem,3vw,3rem)'} color={'#1191ff'} >
-            I'm a web developer
+          <Heading fontSize={'clamp(3rem,3vw,3rem)'} color={'#4ba3ef99'} >
+            I'm a web developer.
           </Heading>
-          
+          <AnimatedButton size='lg' color='white'  colorScheme='blackAlpha' border="white 2px solid" background="#000331">
+            Find out more 
+          </AnimatedButton>
+ 
         </VStack>
     </div>
   )

@@ -1,6 +1,6 @@
 import React,{useRef, forwardRef,useImperativeHandle} from 'react'
-import {Flex, Text, Grid, GridItem} from '@chakra-ui/react'
-import { ListContainer, WelcomeDiv,AnimatedCircle, ColorDiv, HelloDiv, Footer, AnimatedButton } from '../../styles';
+import {Divider , Text, Heading, VStack, Box} from '@chakra-ui/react'
+import { ListContainer, ColorDiv, Footer } from '../../styles';
 import Welcome from '../welcome/Welcome';
 
 const List = forwardRef((props,ref) =>{
@@ -29,25 +29,24 @@ const List = forwardRef((props,ref) =>{
   return (
     <ListContainer> 
       <Welcome ref={ref1}/> 
-    
+      <Box ref={ref2} h={'fit-content'}>
+        <Divider borderColor={'#add0ff96'} w='90%' m='20px auto'/>
+        <VStack  p={'5px 10vw'}  alignItems={'start'} color={'#add0ff96'}>
+          <Heading as={'h3'} color={'#add0ff96'}>
+            About me
+          </Heading>  
+          <Text fontSize='xl'>
+            Hi! my name is Miguel Alvarez, 
+          </Text> 
+          <Text textAlign="start" fontSize="4xl" > 
+          Projects
+        </Text>
+        </VStack>
+      </Box>
       <ColorDiv id="third-div" ref={ref3} height="fit-content" padding="50px" background="#e63946" >
         <Text textAlign="start" fontSize="4xl" > 
           Projects
         </Text>
-        {/* <Grid templateColumns="repeat(6,1fr)" mt="30px" bg="#ffbdc2" border="2px #ffbdc2 solid" borderRadius="3px" gap="2px">
-          <GridItem w='100%' h='200' bg='blue.500' colSpan="2">
-
-          </GridItem>
-          <GridItem w='100%' h='200' bg='red.500' p="15"  colSpan="4">
-           <p> A customizable clock created with React. You can change the clock's font, size and background color. 
-            You can change its position using Javascript's Drag and Drop API.</p>
-          </GridItem>
-          
-          <GridItem w='100%' h='400' bg='blue.500'  colSpan="2"/>
-          <GridItem w='100%' h='400' bg='red.500'  colSpan="4"/>
-          <GridItem w='100%' h='400' bg='blue.500'  colSpan="2"/>
-          <GridItem w='100%' h='400' bg='red.500'  colSpan="4"/>
-        </Grid> */}
       </ColorDiv>
       <ColorDiv id="fourth-div" ref={ref4} height="800px" background="darkcyan">
         jajaja

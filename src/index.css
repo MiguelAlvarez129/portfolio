@@ -22,17 +22,12 @@ html {
 
 @font-face {
   font-family: "Raleway";
-  src: url(../node_modules/@fontsource/raleway/500.css);
+  src: url(../node_modules/@fontsource/raleway/);
 }
 
 
 @font-face {
   font-family: "Libre Franklin";
   src: url(./assets/fonts/LibreFranklin/LibreFranklin.ttf);
-}
-
-
-h1,h2,h3,p{
-  font-family: 'Libre Franklin';
 }
 

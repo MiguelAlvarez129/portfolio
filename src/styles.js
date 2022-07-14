@@ -142,11 +142,12 @@ export const ColorDiv = styled.div`
   }
 `
 export const AnimatedButton = styled(Button)`
-  margin-top:10px;
+  margin-top:10vh !important;
   /* background:#FFF7D6 !important;
   font-weight: bol !important;  */
   border-bottom: 6px solid white !important;
-  transition: box-shadow .2s !important;
+  transition: box-shadow .2s, background 1s !important;
+  font-family: 'Roboto', sans-serif !important;
   &:active{
     transform: translateY(5px) !important;
     border-bottom: 1.5px solid white!important;
@@ -155,7 +156,11 @@ export const AnimatedButton = styled(Button)`
     outline:0 !important;
     box-shadow: none !important;
   }
-   ${() => entranceAnimation({delay:3})}
+  $:hover{
+    background:red !important;
+    background-image:url(${zigzag}) !important;
+  }
+   
 `
 
   export const Footer = styled.div`
@@ -172,14 +177,14 @@ export const AnimatedButton = styled(Button)`
     top: 30%;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
     position: relative;
     font-size: larger;
     color: white;
     @media (max-width:1250px){
     flex-direction:row;
-    top:0;
     justify-content:center;
+    align-items: center;
   }
 
   `
@@ -196,83 +201,50 @@ to {
 `
 
 const animation = css`
-  animation: ${underAnimation} 0.5s reverse forwards
+  animation: ${underAnimation} 
+  1s reverse forwards
 `
 
 const entrance = keyframes`
   from { 
-    transform:translatey(100px);
+    transform:translateX(-300px);
     opacity:0 ;
   } 
 
   to {
-    transform:translatey(0);
+    transform:translateX(0);
     opacity:1;
   }
 ` 
 
-const entranceAnimation = ({delay}) => css`
-  animation:${entrance} ${delay}s forwards;
+const entranceAnimation = ({duration,delay}) => css`
+  animation:${entrance} .5s forwards ${delay}s;
 `
 
 export const SideMenuOptions = styled.a` 
   font-family: Raleway;
+  opacity:0;
   display:block;
-  margin: 10px;
+  margin: 5px;
   text-decoration:none;
   text-align:end;
-  transition: color 0.5s;
   color:${props => props.selected ? 'white' : '#bbbbbb'};
   padding: 0 20px;
   width:85%;
   font-weight:400; 
   letter-spacing: 3px;
-  font-size:medium;
+  font-size:larger;
+  text-shadow: ${props => props.selected ? '2px 2px #ce2858' : ' 0px 0px #ce2858'};
+  transition: text-shadow .25s, color .5s;
+
   ${props => entranceAnimation(props)};
   
-  &::after{
-    content: '';
-    top: 0px;
-    height:16px;
-    width:100%;
-    background-color:${sideBarBg};
-    display:block;
-    position: relative;
-    ${props => props.selected && animation};
-    
-  }
-  
-  &::before{
-    content: '';
-    height:5px;
-    width:100%;
-    border-radius:2px;
-    background:#ce2858;
-    display:block;
-    position: relative;
-    top: 36px;
-    /* @media (max-width:1250px){
-      
-      border-radius:0px;
-      
-    } */
-    
-    
-  }
+
   @media (max-width:1250px){
     animation:none;
     width:fit-content;
     font-size:small;
-    &::before{
-      border-radius:0px;
-      height: 4px;
-    }
-
-    &::after{
-      border-radius:0px;
-      height:16px;
-   
-    }
+    opacity:1;
   }
   `
   export const UnderBar = styled.div`

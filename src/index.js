@@ -5,13 +5,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '@fontsource/roboto/700.css'
 import '@fontsource/roboto-slab/500.css'
+import '@fontsource/raleway/500.css'
 import { extendTheme, ChakraProvider } from '@chakra-ui/react';
+
 const theme = extendTheme({
     fonts: {
       heading: `'Roboto', sans-serif`,
-      body: `'Roboto Slab', sans-serif`,
+      body: `'Raleway',sans-serif`,
+      
     },
   })
+
 ReactDOM.render(
     <ChakraProvider theme={theme}>
         <App />        
