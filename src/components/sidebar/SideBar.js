@@ -23,12 +23,10 @@ const SideBar = (props) =>{
   }
   return (
     <SideBarContainer>
-      {/* {props.value} */}
     <SideMenuContainer>
       {sideMenu.map((e,index)=>
       <SideMenuOptions key={index} href={"#" + e.id} selected={e.selected} delay={e.delay}>
        {e.title}  
-       {/* <UnderBar  /> */}
        </SideMenuOptions>)}
     </SideMenuContainer>
     </SideBarContainer>

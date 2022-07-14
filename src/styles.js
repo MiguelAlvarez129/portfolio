@@ -1,10 +1,10 @@
-import { Button } from '@chakra-ui/react'
+import { Button, Text } from '@chakra-ui/react'
 import styled, {css} from 'styled-components'
 import { keyframes } from 'styled-components'
 import zigzag from '../src/assets/img/zig-zag.svg'
 
 
-const sideBarBg = '#0E3155'
+const sideBarBg = '#000224'
 const sidebarW = '300px'
 export const LayoutContainer = styled.div`
     height: 100%;
@@ -216,6 +216,7 @@ const entranceAnimation = ({delay}) => css`
 `
 
 export const SideMenuOptions = styled.a` 
+  font-family: Raleway;
   display:block;
   margin: 10px;
   text-decoration:none;
@@ -225,8 +226,8 @@ export const SideMenuOptions = styled.a`
   padding: 0 20px;
   width:85%;
   font-weight:400; 
-  letter-spacing: 5px;
-  font-size:smaller;
+  letter-spacing: 3px;
+  font-size:medium;
   ${props => entranceAnimation(props)};
   
   &::after{
