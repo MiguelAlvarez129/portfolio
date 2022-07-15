@@ -8,7 +8,7 @@ const Layout = (props) =>{
   useEffect(() => {
     const observer = new IntersectionObserver(callback,{threshold:0.3})
     observer.observe(ref.current.getRef1())
-
+    observer.observe(ref.current.getRef2())
     observer.observe(ref.current.getRef3())
     observer.observe(ref.current.getRef4())
   }, []);

@@ -32,9 +32,11 @@ const Welcome = forwardRef((props,ref) =>{
           <Heading fontSize={'clamp(3rem,3vw,3rem)'} color={'#4ba3ef99'} >
             I'm a web developer.
           </Heading>
-          <AnimatedButton size='lg' color='white'  colorScheme='blackAlpha' border="white 2px solid" background="#000331">
-            Find out more 
-          </AnimatedButton>
+          <a href="#second-div">
+            <AnimatedButton  size='lg' color='white' colorScheme='blackAlpha' border="white 2px solid" background="#000331">
+              Find out more!
+            </AnimatedButton>
+          </a>
  
         </VStack>
     </div>

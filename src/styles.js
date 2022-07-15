@@ -231,11 +231,11 @@ export const SideMenuOptions = styled.a`
   color:${props => props.selected ? 'white' : '#bbbbbb'};
   padding: 0 20px;
   width:85%;
-  font-weight:400; 
+  font-weight:600; 
   letter-spacing: 3px;
   font-size:larger;
-  text-shadow: ${props => props.selected ? '2px 2px #ce2858' : ' 0px 0px #ce2858'};
-  transition: text-shadow .25s, color .5s;
+  text-shadow: ${props => props.selected ? '2px 2px #ce2858, 4px 2px #ce2858;' : ' 0px 0px #ce2858'};
+  transition: text-shadow .5s, color .5s;
 
   ${props => entranceAnimation(props)};
   
