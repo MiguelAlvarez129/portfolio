@@ -1,12 +1,60 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
+import { VStack, Heading, Text, Flex, Image, Box, Link, textDecoration} from '@chakra-ui/react'
+import clock from '../../assets/gif/clock.gif'
 
-
-const Projects = () =>{
+const Projects = forwardRef((props,ref) =>{
 
 
   return (
-    
+    <VStack p={'5px 5vw'} ref={ref} alignItems={'center'} color={'#c6cfff'} justify={'center'} id="third-div">
+      <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
+        Projects
+      </Heading>
+      <br />
+      <Flex direction={{base:'column',lg:'row'}} p={{base:'30px',lg:'0'}} align={'center'}>
+        <VStack alignSelf={'center'}>
+          <Link href='https://miguelalvarez129.github.io/clock/' target={'blank'} _hover={{textDecoration:'none'}}>
+            <Heading as={'h5'} size='lg' color={'#add0ff96'}>
+              React Clock
+            </Heading>
+          </Link>
+          <Box boxShadow='md' p={'5px 10px'} h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
+            <Text fontSize='lg'>
+              This was the first project where i used React, i learned the basics of how React and its hooks work. Also 
+              it was the first project i did independently so it was a big step for me. 
+            </Text>  
+          </Box>
+          <Text fontSize={'sm'}>
+            Made using React
+            </Text>
+        </VStack>
+        <Image  src={clock}  m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
+      </Flex>
+      <br />
+      <Flex direction={{base:'column',lg:'row-reverse'}}  p={{base:'30px',lg:'0'}} align={'center'} >
+        <VStack alignSelf={'center'}>
+          <Link href="https://suspicious-tereshkova-ee3024.netlify.app/home" target={'blank'} _hover={{textDecoration:'none'}}>
+            <Heading as={'h5'} size='lg' color={'#add0ff96'}>
+              Twitter Clone
+            </Heading>
+          </Link>
+          <Box boxShadow='md' p={'5px 10px'}  h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
+            <Text fontSize='md'>
+              This was my very first fullstack app. It helped me understand how the backend and frontend work together, and how to keep
+              the user state persist throughout the whole app. I had only done very basic ExpressJS apps before this one so this project
+              allowed to gain the experience that i have now. I also learned how to use Redux in order to maintain and facilitate the state 
+              throughout the app.
+            </Text>  
+            <br />
+          </Box>
+            <Text fontSize={'sm'}>
+            Made using React, React Router, Redux, Styled Components, ExpressJS, NodeJS, MongoDB, Mongoose, Socket IO
+            </Text>
+        </VStack>
+        <Image  src={clock} m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
+      </Flex>
+    </VStack>
   )
-}
+})
 
 export default Projects;

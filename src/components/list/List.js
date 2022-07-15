@@ -1,9 +1,9 @@
 import React,{useRef, forwardRef,useImperativeHandle} from 'react'
 import {Divider , Text, Heading, VStack, Box, SimpleGrid, GridItem} from '@chakra-ui/react'
 import { ListContainer, ColorDiv, Footer } from '../../styles';
-import {BsFillOctagonFill} from 'react-icons/bs'
 import Welcome from '../welcome/Welcome';
 import About from '../about/About';
+import Projects from '../projects/Projects'
 
 const List = forwardRef((props,ref) =>{
 
@@ -33,12 +33,8 @@ const List = forwardRef((props,ref) =>{
       <Welcome ref={ref1}/> 
         <Divider borderColor={'#add0ff96'} w='90%' m='20px auto'/>
       <About ref={ref2}/>
-        
-      <ColorDiv id="third-div" ref={ref3} height="fit-content" padding="50px" background="#e63946" >
-        <Text textAlign="start" fontSize="4xl" > 
-          Projects
-        </Text>
-      </ColorDiv>
+        <Divider borderColor={'#add0ff96'} w='90%' m='20px auto'/>
+      <Projects ref={ref3}/>
       <ColorDiv id="fourth-div" ref={ref4} height="800px" background="darkcyan">
         jajaja
       </ColorDiv>

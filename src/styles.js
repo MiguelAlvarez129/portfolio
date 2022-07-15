@@ -186,6 +186,9 @@ export const AnimatedButton = styled(Button)`
     justify-content:center;
     align-items: center;
   }
+  
+ 
+
 
   `
 

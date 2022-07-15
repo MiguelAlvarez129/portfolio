@@ -15,21 +15,21 @@ const Welcome = forwardRef((props,ref) =>{
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
-              <Heading fontSize={'clamp(3rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>
+              <Heading fontSize={'clamp(4rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>
               Hello!
               </Heading>
             </GridItem>
             <GridItem colStart={1} rowStart={1}>
-              <Heading fontSize={'clamp(3rem,6vw,7rem)'} backgroundClip={'text'} bgImage={`url(${zigzag})`} color={'transparent'} position={'relative'} zIndex={5} left={'clamp(.25rem,.5vw,.5rem)'} top={'clamp(0.1rem,0.1vw,0.2rem)'}>
+              <Heading fontSize={'clamp(4rem,6vw,7rem)'} backgroundClip={'text'} bgImage={`url(${zigzag})`} color={'transparent'} position={'relative'} zIndex={5} left={'clamp(.25rem,.5vw,.5rem)'} top={'clamp(0.1rem,0.1vw,0.2rem)'}>
               Hello! 
               </Heading>
             </GridItem>
           </Grid>
           
-          <Heading fontSize={'clamp(3rem,3vw,3rem)'} color={'#add0ff96'}>
+          <Heading fontSize={'clamp(2rem,4vw,5rem)'} color={'#add0ff96'}>
           My name is Miguel Alvarez,
           </Heading>
-          <Heading fontSize={'clamp(3rem,3vw,3rem)'} color={'#4ba3ef99'} >
+          <Heading fontSize={'clamp(2rem,4vw,5rem)'} color={'#4ba3ef99'} >
             I'm a web developer.
           </Heading>
           <a href="#second-div">

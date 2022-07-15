@@ -6,7 +6,7 @@ import List from '../list/List'
 const Layout = (props) =>{
   const [value, setValue] = useState(null)
   useEffect(() => {
-    const observer = new IntersectionObserver(callback,{threshold:0.3})
+    const observer = new IntersectionObserver(callback,{threshold:0.5})
     observer.observe(ref.current.getRef1())
     observer.observe(ref.current.getRef2())
     observer.observe(ref.current.getRef3())

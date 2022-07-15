@@ -4,23 +4,30 @@ import {BsCircle, BsFillCircleFill} from 'react-icons/bs'
 const About = forwardRef((props,ref) => {
   return (
     
-    <VStack  p={'5px 10vw'} ref={ref} alignItems={'start'} color={'#c6cfff'} justify={'center'} id="second-div">
+    <VStack  p={{base:'5px 10px',sm:'5px 10vw'}} m={'auto'}  ref={ref} alignItems={'center'} color={'#c6cfff'} justifyContent={'center'} minH={'100vh'} maxW={'1800px'} id="second-div">
        {/* <Divider borderColor={'#add0ff96'} w='80vw' /> */}
-      <Heading as={'h3'} color={'#add0ff96'}>
+      <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
         About me
       </Heading>  
-      <Text fontSize='xl'>
+      <br />
+      <Text fontSize='lg'>
         Hi! my name is Miguel Alvarez, i'm a systems engineer currently working as a web developer. 
         I began in the world of web dev back in 2018 with freecodecamp.org where i learned the basics of 
         HTML, CSS, Javascript and a bit of React. Later i decided to take my learning into a more self-taught path
         and began learning React and ExpressJS on my own. 
-        <br /><br />
+        Here you can see the technlogies i have worked with:
+      </Text> 
+      <br />
+      <Text fontSize='lg' >
         Currently i work with technologies such as Angular, React, and Expressjs and db platforms such as MongoDB and 
         PostgreSQL. I always look forward to broaden my spectrum regarding web development and learning new things
         that would make me a better developer.
-        <br /> <br />
-        Here you can see the technlogies i have worked with:
-        <SimpleGrid columns={2} w={"300px"} gap={3} m={5}>
+      </Text>
+      <br />
+       <Text fontSize='lg' >
+       Here you can see the technlogies i have worked with:
+      </Text>
+        <SimpleGrid columns={2} maxW={"300px"} gap={3} m={5} fontSize={'lg'}>
           <GridItem colSpan={1} d={'flex'} alignItems={'center'} >
             <BsFillCircleFill size={'10px'} color={'#ce2858'} style={{display:'inline-block',margin:"0 10px"}}/>
             Angular
@@ -41,12 +48,7 @@ const About = forwardRef((props,ref) => {
           <GridItem colSpan={1}>
             MongoDB
           </GridItem>
-          
         </SimpleGrid>
-      </Text> 
-      <Text textAlign="start" fontSize="4xl" > 
-      Projects
-    </Text>
   </VStack>
   )
 })
