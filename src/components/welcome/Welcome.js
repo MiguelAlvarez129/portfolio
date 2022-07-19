@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react'
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { AnimatedButton, HelloDiv, TextShadow } from '../../styles';
+import { AnimatedButton, WaveDiv} from '../../styles';
 import sun from '../../assets/img/sun.svg'
 import Wave from 'react-wavify'
 import {VStack, Spacer , Grid, GridItem, Heading} from '@chakra-ui/react'
@@ -11,7 +11,7 @@ import zigzag from '../../assets/img/zig-zag.svg'
 const Welcome = forwardRef((props,ref) =>{
 
   return (
-    <div id="first-div" ref={ref} style={{bg:'#000331',height:'100vh'}} >
+    <WaveDiv id="first-div" ref={ref} reverse={false} >
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
@@ -39,7 +39,7 @@ const Welcome = forwardRef((props,ref) =>{
           </a>
  
         </VStack>
-    </div>
+    </WaveDiv>
   )
 })
 

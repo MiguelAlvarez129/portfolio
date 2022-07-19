@@ -1,17 +1,18 @@
 import React, {forwardRef} from 'react'
 import { VStack, Heading, Text, Flex, Image, Box, Link, textDecoration} from '@chakra-ui/react'
 import clock from '../../assets/gif/clock.gif'
-
+import newClock from '../../assets/gif/new-clock.gif'
+import twitter from '../../assets/gif/twitter.gif'
 const Projects = forwardRef((props,ref) =>{
 
 
   return (
-    <VStack p={'5px 5vw'} ref={ref} alignItems={'center'} color={'#c6cfff'} justify={'center'} id="third-div">
+    <VStack h={'fit-content'} p={'5px 5vw'} ref={ref} alignItems={'center'} color={'#c6cfff'} justify={'center'} id="third-div">
       <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
         Projects
       </Heading>
       <br />
-      <Flex direction={{base:'column',lg:'row'}} p={{base:'30px',lg:'0'}} align={'center'}>
+      <Flex direction={{base:'column',lg:'row'}} p={{base:'0',md:'30px'}} align={'center'}>
         <VStack alignSelf={'center'}>
           <Link href='https://miguelalvarez129.github.io/clock/' target={'blank'} _hover={{textDecoration:'none'}}>
             <Heading as={'h5'} size='lg' color={'#add0ff96'}>
@@ -31,9 +32,9 @@ const Projects = forwardRef((props,ref) =>{
         <Image  src={clock}  m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
       </Flex>
       <br />
-      <Flex direction={{base:'column',lg:'row-reverse'}}  p={{base:'30px',lg:'0'}} align={'center'} >
+      <Flex direction={{base:'column',lg:'row-reverse'}}  p={{base:'0',md:'30px'}} align={'center'} >
         <VStack alignSelf={'center'}>
-          <Link href="https://suspicious-tereshkova-ee3024.netlify.app/home" target={'blank'} _hover={{textDecoration:'none'}}>
+          <Link href="https://twittercl0ne.netlify.app/home" target={'blank'} _hover={{textDecoration:'none'}}>
             <Heading as={'h5'} size='lg' color={'#add0ff96'}>
               Twitter Clone
             </Heading>
@@ -51,7 +52,29 @@ const Projects = forwardRef((props,ref) =>{
             Made using React, React Router, Redux, Styled Components, ExpressJS, NodeJS, MongoDB, Mongoose, Socket IO
             </Text>
         </VStack>
-        <Image  src={clock} m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
+        <Image  src={twitter} m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
+      </Flex>
+      <br />
+      <Flex direction={{base:'column',lg:'row'}}  p={{base:'0',md:'30px'}} align={'center'} >
+        <VStack alignSelf={'center'}>
+          <Link href="https://twittercl0ne.netlify.app/home" target={'blank'} _hover={{textDecoration:'none'}}>
+            <Heading as={'h5'} size='lg' color={'#add0ff96'}>
+              New React Clock
+            </Heading>
+          </Link>
+          <Box boxShadow='md' p={'5px 10px'}  h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
+            <Text fontSize='md'>
+              I made this new version after seeing how messy the code was on the first React Clock.
+              This project helped me realize how much i have learned since i began learning react and how much different a project 
+              can turn out when you have more experience working with a framework.
+            </Text>  
+            <br />
+          </Box>
+            <Text fontSize={'sm'}>
+            Made using React, React Router, Redux, Styled Components, Chakra-UI
+            </Text>
+        </VStack>
+        <Image  src={newClock} m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
       </Flex>
     </VStack>
   )

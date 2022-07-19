@@ -31,13 +31,12 @@ const List = forwardRef((props,ref) =>{
   return (
     <ListContainer> 
       <Welcome ref={ref1}/> 
-        <Divider borderColor={'#add0ff96'} w='90%' m='20px auto'/>
       <About ref={ref2}/>
         <Divider borderColor={'#add0ff96'} w='90%' m='20px auto'/>
       <Projects ref={ref3}/>
-      <ColorDiv id="fourth-div" ref={ref4} height="800px" background="darkcyan">
+      <div id="fourth-div" ref={ref4} height="800px" background="darkcyan">
         jajaja
-      </ColorDiv>
+      </div>
       <Footer>
         <p style={{color:"#cf8eff"}}>
         Images: <a href="https://haikei.app/"> haikei.app</a> &nbsp; | &nbsp;  Design: Myself

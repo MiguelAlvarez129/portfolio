@@ -2,7 +2,11 @@ import { Button, Text } from '@chakra-ui/react'
 import styled, {css} from 'styled-components'
 import { keyframes } from 'styled-components'
 import zigzag from '../src/assets/img/zig-zag.svg'
-
+// import wave from '../src/assets/img/wave.svg'
+import wave from '../src/assets/img/wave2.svg'
+import waveReverse from '../src/assets/img/wave-reverse.svg'
+import waveSmall from '../src/assets/img/wave-small.svg'
+import waveSmallReverse from '../src/assets/img/wave-small-reverse.svg'
 
 const sideBarBg = '#000224'
 const sidebarW = '300px'
@@ -91,26 +95,18 @@ export const AnimatedCircle = styled.div`
   }
 `
 
-export const ColorDiv = styled.div`
-  /* margin-top: 100vh; */
-  position: relative;
-  height:fit-content;
-  z-index: 1;
-  width: 100%;
-  color:white;
-  padding: ${props => props.padding } ;
-  /* height: ${(props)=> props.height ? props.height : '500px'}; */
-  background: ${props => props.background ? props.background : '#729efd' };
-  font-family:"Montserrat";
-  h1, h2, h3, h4, h5, h6 {
-  font-size: revert;
-  font-weight: revert;
-  }
-
-  h1{
-    font-weight:400;
+export const WaveDiv = styled.div`
+  min-height:100vh;
+  background-image:url(${props => props.reverse ? waveReverse : wave});
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:${props => props.reverse ? 'top' : 'bottom'};
+  @media(max-width:768px){
+    background-image:url(${props => props.reverse ? waveSmallReverse : waveSmall});
   }
 `
+
+
 
   export const HelloDiv = styled.div`
   position: absolute;
