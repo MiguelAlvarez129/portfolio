@@ -1,17 +1,16 @@
 import React, {forwardRef} from 'react'
-import { ParallaxBanner } from 'react-scroll-parallax';
 import { AnimatedButton, WaveDiv} from '../../styles';
-import sun from '../../assets/img/sun.svg'
-import Wave from 'react-wavify'
-import {VStack, Spacer , Grid, GridItem, Heading} from '@chakra-ui/react'
+import {VStack, Grid, GridItem, Heading} from '@chakra-ui/react'
 import bg from '../../assets/img/bg.svg'
 import zigzag from '../../assets/img/zig-zag.svg'
+import wave from '../../assets/img/wave2.svg'
+import waveSmall from '../../assets/img/wave-small.svg'
 
 
 const Welcome = forwardRef((props,ref) =>{
 
   return (
-    <WaveDiv id="first-div" ref={ref} reverse={false} >
+    <WaveDiv id="first-div" ref={ref} svg={wave} smallSvg={waveSmall} >
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
@@ -33,11 +32,11 @@ const Welcome = forwardRef((props,ref) =>{
             I'm a web developer.
           </Heading>
           <a href="#second-div">
-            <AnimatedButton  size='lg' color='white' colorScheme='blackAlpha' border="white 2px solid" background="#000331">
+            <AnimatedButton  size='lg' color='white' colorScheme='blackAlpha' border="white 2px solid" >
               Find out more!
             </AnimatedButton>
           </a>
- 
+  
         </VStack>
     </WaveDiv>
   )

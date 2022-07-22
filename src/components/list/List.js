@@ -4,7 +4,7 @@ import { ListContainer, ColorDiv, Footer } from '../../styles';
 import Welcome from '../welcome/Welcome';
 import About from '../about/About';
 import Projects from '../projects/Projects'
-
+import Contact from '../contact/Contact';
 const List = forwardRef((props,ref) =>{
 
   const ref1 = useRef(null)
@@ -34,9 +34,8 @@ const List = forwardRef((props,ref) =>{
       <About ref={ref2}/>
         <Divider borderColor={'#add0ff96'} w='90%' m='20px auto'/>
       <Projects ref={ref3}/>
-      <div id="fourth-div" ref={ref4} height="800px" background="darkcyan">
-        jajaja
-      </div>
+
+      <Contact ref={ref4}/> 
       <Footer>
         <p style={{color:"#cf8eff"}}>
         Images: <a href="https://haikei.app/"> haikei.app</a> &nbsp; | &nbsp;  Design: Myself

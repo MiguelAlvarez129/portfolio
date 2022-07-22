@@ -97,12 +97,12 @@ export const AnimatedCircle = styled.div`
 
 export const WaveDiv = styled.div`
   min-height:100vh;
-  background-image:url(${props => props.reverse ? waveReverse : wave});
+  background-image:url(${props => props.svg});
   background-repeat:no-repeat;
   background-size:cover;
   background-position:${props => props.reverse ? 'top' : 'bottom'};
   @media(max-width:768px){
-    background-image:url(${props => props.reverse ? waveSmallReverse : waveSmall});
+    background-image:url(${props => props.smallSvg});
   }
 `
 
@@ -138,7 +138,6 @@ export const WaveDiv = styled.div`
   }
 `
 export const AnimatedButton = styled(Button)`
-  margin-top:10vh !important;
   /* background:#FFF7D6 !important;
   font-weight: bol !important;  */
   border-bottom: 6px solid white !important;

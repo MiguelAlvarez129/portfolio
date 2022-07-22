@@ -64,7 +64,11 @@ const Projects = forwardRef((props,ref) =>{
           </Link>
           <Box boxShadow='md' p={'5px 10px'}  h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
             <Text fontSize='md'>
-              I made this new version after seeing how messy the code was on the first React Clock.
+              I made this new version after seeing how messy the code was on the first React Clock. I added a few more features and reimplemented
+              others in a way i found more satisfying compared to the first iteration.
+              <br />
+              <br />
+              
               This project helped me realize how much i have learned since i began learning react and how much different a project 
               can turn out when you have more experience working with a framework.
             </Text>  

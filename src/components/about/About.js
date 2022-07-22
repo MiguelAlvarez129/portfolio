@@ -2,9 +2,11 @@ import React, {forwardRef} from 'react'
 import {Text, Heading, VStack, SimpleGrid, GridItem, Divider} from '@chakra-ui/react'
 import {BsCircle, BsFillCircleFill} from 'react-icons/bs'
 import { WaveDiv } from '../../styles'
+import waveReverse from '../../assets/img/wave-reverse.svg'
+import waveSmallReverse from '../../assets/img/wave-small-reverse.svg'
 const About = forwardRef((props,ref) => {
   return (
-  <WaveDiv reverse={true}>
+  <WaveDiv svg={waveReverse} smallSvg={waveSmallReverse} reverse={true}>
     <VStack  p={{base:'5px 10px',sm:'5px 10vw'}} m={'auto'}  ref={ref} alignItems={'center'} color={'#c6cfff'} justifyContent={'center'} minH={'100vh'} maxW={'1800px'} id="second-div">
        {/* <Divider borderColor={'#add0ff96'} w='80vw' /> */}
       <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
