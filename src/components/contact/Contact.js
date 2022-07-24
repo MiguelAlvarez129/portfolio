@@ -1,7 +1,7 @@
 import React, {forwardRef} from 'react'
-import { WaveDiv, AnimatedButton } from '../../styles'
-import circles from '../../assets/img/circles.svg'
-import {Box, VStack, Flex, Container, Image, Text, Textarea} from '@chakra-ui/react'
+import { AnimatedButton } from '../../styles'
+import {Wave} from 'react-wavify'
+import {Box, VStack, Flex, Heading, Image, Text, Textarea} from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 import confetti from '../../assets/img/confetti2.svg'
 import carta from '../../assets/img/carta.png'
@@ -26,8 +26,11 @@ const Contact = forwardRef((props,ref) => {
     }
   return (
 
-        <Box  ref={ref} id='fourth-div' minH={'100vh'} backgroundImage={confetti} backgroundRepeat={'no-repeat'} backgroundSize={'cover'} >
-           <VStack justify={'center'} h={'100vh'}>
+        <Box  ref={ref} id='fourth-div' minH={'100vh'} >
+           <VStack justify={'center'} h={'fit-content'}  minH={'100vh'} p={{base:0,sm:'5px 5vw'}}>
+           <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
+                Get in Touch
+            </Heading>  
             <Flex h={'fit-content'} w={'full'} direction={{base:'column',lg:'row'}}  p={{base:'1em',sm:'30px'}}>
                     <VStack  w={'full'} p={'10px 20px'}  bg={'#0b0155a3'} justify={'center'} borderRadius={'4px'}>
                     

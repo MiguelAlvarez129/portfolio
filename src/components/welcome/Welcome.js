@@ -2,6 +2,7 @@ import React, {forwardRef} from 'react'
 import { AnimatedButton, WaveDiv} from '../../styles';
 import {VStack, Grid, GridItem, Heading} from '@chakra-ui/react'
 import bg from '../../assets/img/bg.svg'
+import {motion} from 'framer-motion'
 import zigzag from '../../assets/img/zig-zag.svg'
 import wave from '../../assets/img/wave2.svg'
 import waveSmall from '../../assets/img/wave-small.svg'
@@ -12,14 +13,18 @@ const Welcome = forwardRef((props,ref) =>{
   return (
     <WaveDiv id="first-div" ref={ref} svg={wave} smallSvg={waveSmall} >
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
+      <motion.div
+        initial={{ marginTop: '100px' }}
+        whileInView={{ opacity: '0px' }}
+      >
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
-              <Heading fontSize={'clamp(4rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>
+              <Heading letterSpacing={'5px'} fontSize={'clamp(4rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>
               Hello!
               </Heading>
             </GridItem>
             <GridItem colStart={1} rowStart={1}>
-              <Heading fontSize={'clamp(4rem,6vw,7rem)'} backgroundClip={'text'} bgImage={`url(${zigzag})`} color={'transparent'} position={'relative'} zIndex={5} left={'clamp(.25rem,.5vw,.5rem)'} top={'clamp(0.1rem,0.1vw,0.2rem)'}>
+              <Heading letterSpacing={'5px'} fontSize={'clamp(4rem,6vw,7rem)'} backgroundClip={'text'} bgImage={`url(${zigzag})`} color={'transparent'} position={'relative'} zIndex={5} left={'clamp(0.5rem,0.7vw,1rem);'} top={'clamp(0.1rem,0.1vw,0.2rem)'}>
               Hello! 
               </Heading>
             </GridItem>
@@ -37,6 +42,7 @@ const Welcome = forwardRef((props,ref) =>{
             </AnimatedButton>
           </a>
   
+        </motion.div>
         </VStack>
     </WaveDiv>
   )
