@@ -13,10 +13,7 @@ const Welcome = forwardRef((props,ref) =>{
   return (
     <WaveDiv id="first-div" ref={ref} svg={wave} smallSvg={waveSmall} >
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
-      <motion.div
-        initial={{ marginTop: '100px' }}
-        whileInView={{ opacity: '0px' }}
-      >
+       <motion.div initial={{opacity:0,y:-50}} animate={props.value === 'first-div' &&  {opacity:1, y:0}} transition={{delay:.2, ease:'easeInOut'}}>
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
               <Heading letterSpacing={'5px'} fontSize={'clamp(4rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>

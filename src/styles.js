@@ -143,7 +143,7 @@ export const AnimatedButton = styled(Button)`
   border-bottom: 6px solid white !important;
   transition: box-shadow .2s, background 1s !important;
   font-family: 'Roboto', sans-serif !important;
-  &:active{
+  &:active:enabled{
     transform: translateY(5px) !important;
     border-bottom: 1.5px solid white!important;
   }
