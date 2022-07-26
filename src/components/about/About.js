@@ -15,7 +15,7 @@ const About = forwardRef((props,ref) => {
             About me
           </Heading>  
           <br />
-          <Text fontSize='lg'>
+          <Text fontSize={"clamp(1rem,1.5vw,1.5rem)"} >
             Hi! my name is Miguel Alvarez, i'm a systems engineer currently working as a web developer. 
             I began in the world of web dev back in 2018 with freecodecamp.org where i learned the basics of 
             HTML, CSS, Javascript and a bit of React. Later i decided to take my learning into a more self-taught path
@@ -23,13 +23,13 @@ const About = forwardRef((props,ref) => {
             Here you can see the technlogies i have worked with:
           </Text> 
           <br />
-          <Text fontSize='lg' >
+          <Text fontSize={"clamp(1rem,1.5vw,1.5rem)"}   >
             Currently i work with technologies such as Angular, React, and Expressjs and db platforms such as MongoDB and 
             PostgreSQL. I always look forward to broaden my spectrum regarding web development and learning new things
             that would make me a better developer.
           </Text>
           <br />
-          <Text fontSize='lg' >
+          <Text fontSize={{base:"md",lg:"xl"}}  >
           Here you can see the technlogies i have worked with:
           </Text>
             <SimpleGrid columns={2} maxW={"300px"} gap={3} m={5} fontSize={'lg'}>

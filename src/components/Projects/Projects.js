@@ -22,7 +22,7 @@ const Projects = forwardRef((props,ref) =>{
               </Heading>
             </Link>
             <Box boxShadow='md' p={'5px 10px'} h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
-              <Text fontSize='lg'>
+              <Text fontSize={"clamp(1rem,1.5vw,1.5rem)"}  >
                 This was the first project where i used React, i learned the basics of how React and its hooks work. Also 
                 it was the first project i did independently so it was a big step for me. 
               </Text>  
@@ -42,7 +42,7 @@ const Projects = forwardRef((props,ref) =>{
               </Heading>
             </Link>
             <Box boxShadow='md' p={'5px 10px'}  h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
-              <Text fontSize='md'>
+              <Text fontSize={"clamp(1rem,1.5vw,1.5rem)"}   >
                 This was my very first fullstack app. It helped me understand how the backend and frontend work together, and how to keep
                 the user state persist throughout the whole app. I had only done very basic ExpressJS apps before this one so this project
                 allowed to gain the experience that i have now. I also learned how to use Redux in order to maintain and facilitate the state 
@@ -65,7 +65,7 @@ const Projects = forwardRef((props,ref) =>{
               </Heading>
             </Link>
             <Box boxShadow='md' p={'5px 10px'}  h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
-              <Text fontSize='md'>
+              <Text fontSize={"clamp(1rem,1.5vw,1.5rem)"}  >
                 I made this new version after seeing how messy the code was on the first React Clock. I added a few more features and reimplemented
                 others in a way i found more satisfying compared to the first iteration.
                 <br />
