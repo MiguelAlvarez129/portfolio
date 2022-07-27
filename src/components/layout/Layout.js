@@ -7,8 +7,8 @@ import { AnimationContext } from '../../animationContext'
 const Layout = (props) =>{
   const [value, setValue] = useState(null)
   useEffect(() => {
-    const observer = new IntersectionObserver(callback,{threshold:0.2,trackVisibility: true,
-      delay: 100 })
+    const observer = new IntersectionObserver(callback,{threshold:0.1,
+      })
     observer.observe(ref.current.getRef1())
     observer.observe(ref.current.getRef2())
     observer.observe(ref.current.getRef3())

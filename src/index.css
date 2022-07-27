@@ -20,14 +20,5 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url(../node_modules/@fontsource/raleway/);
-}
 
-
-@font-face {
-  font-family: "Libre Franklin";
-  src: url(./assets/fonts/LibreFranklin/LibreFranklin.ttf);
-}
 
