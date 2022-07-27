@@ -16,10 +16,7 @@ const Projects = forwardRef((props,ref) =>{
     },
     {
       title:"Twitter Clone",
-      body: `This was my very first fullstack app. It helped me understand how the backend and frontend work together, and how to keep
-      the user state persist throughout the whole app. I had only done very basic ExpressJS apps before this one so this project
-      allowed to gain the experience that i have now. I also learned how to use Redux in order to maintain and facilitate the state 
-      throughout the app.`,
+      body: `This was my very first fullstack app. It helped me understand how the backend and frontend work together, and how to keep the user state persist throughout the whole app. I had only done very basic ExpressJS apps before this one so this project allowed to get the experience that i have now. I also learned how to use Redux in order to maintain and facilitate the state throughout the app.`,
       tech: `Made using React, React Router, Redux, Styled Components, ExpressJS, NodeJS, MongoDB, Mongoose, Socket IO`,
       url:"https://twittercl0ne.netlify.app/home",
       gif:twitter
@@ -28,23 +25,32 @@ const Projects = forwardRef((props,ref) =>{
       title:"New React Clock",
       body: `I made this new version after seeing how messy the code was on the first React Clock. I added a few more features and reimplemented
       others in a way i found more satisfying compared to the first iteration.\n
-      This project helped me realize how much i have learned since i began learning react and how much different a project 
-      can turn out when you have more experience working with a framework.`,
+      This project helped me realize how much i have learned since i began learning react and how much different a project can turn out when you have more experience working with a framework.`,
       tech: "Made using React, React Router, Redux, Styled Components, Chakra-UI",
       url:"https://twittercl0ne.netlify.app/home",
       gif:newClock
     },
   ]
 
+  const parent = {
+    visible:{transition:{staggerChildren: 0.5}},
+    hidden:{transition:{staggerChildren: 0.5}}
+  }
+
+  const child = {
+    visible:{opacity:1, y:0,},
+    hidden:{opacity:0,y:-50}
+  }
   return (
-    <VStack h={'fit-content'} p={'5px 5vw'} ref={ref} alignItems={'center'} color={'#c6cfff'} justify={'center'} id="third-div">
-        <motion.div initial={{opacity:0,y:-50}} animate={props.value === 'third-div' &&  {opacity:1, y:0}} transition={{delay:.2, ease:'easeInOut'}}>
+    <VStack h={'fit-content'} ref={ref} alignItems={'center'} color={'#c6cfff'} justify={'center'} id="third-div">
+        <motion.div style={{width:'100%'}} variants={parent} animate={props.value === 'third-div' && 'visible'} transition={{staggerChildren:0.2, delayChildren:2}} initial={'hidden'}>
         <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
           Projects
         </Heading>
         <br />
       {projects.map(({title,body,tech,gif,url},index) => (
-        <Flex direction={{base:'column',lg:index % 2 ? 'row-reverse' : 'row' }} p={{base:'0',md:'10px'}} align={'center'}>
+        <motion.div variants={child}> 
+        <Flex direction={{base:'column',lg:index % 2 ? 'row-reverse' : 'row' }} justify={'space-around'} p={{base:'0',md:'10px'}} align={'center'}>
           <VStack alignSelf={'center'}>
             <Link href={url} target={'blank'} _hover={{textDecoration:'none'}}>
               <Heading as={'h5'} size='lg' color={'#add0ff96'}>
@@ -62,6 +68,7 @@ const Projects = forwardRef((props,ref) =>{
           </VStack>
           <Image  src={gif}  m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
         </Flex>
+        </motion.div> 
       ))}
       </motion.div>
         {/* <motion.div initial={{opacity:0,y:-50}} animate={props.value === 'third-div' &&  {opacity:1, y:0}} transition={{delay:.2, ease:'easeInOut'}}>
