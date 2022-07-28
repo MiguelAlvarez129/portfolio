@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react'
-import { VStack, Heading, Text, Flex, Image, Box, Link, textDecoration} from '@chakra-ui/react'
+import { VStack, Heading, Text, Flex, Image, Box, Link} from '@chakra-ui/react'
 import clock from '../../assets/gif/clock.gif'
 import newClock from '../../assets/gif/new-clock.gif'
 import twitter from '../../assets/gif/twitter.gif'
@@ -16,15 +16,14 @@ const Projects = forwardRef((props,ref) =>{
     },
     {
       title:"Twitter Clone",
-      body: `This was my very first fullstack app. It helped me understand how the backend and frontend work together, and how to keep the user state persist throughout the whole app. I had only done very basic ExpressJS apps before this one so this project allowed to get the experience that i have now. I also learned how to use Redux in order to maintain and facilitate the state throughout the app.`,
+      body: `\t This was my very first fullstack app. It helped me understand how the backend and frontend work together, and how to keep the user state persist throughout the whole app. I had only done very basic ExpressJS apps before this one so this project allowed to get the experience that i have now. I also learned how to use Redux in order to maintain and facilitate the state throughout the app.`,
       tech: `Made using React, React Router, Redux, Styled Components, ExpressJS, NodeJS, MongoDB, Mongoose, Socket IO`,
       url:"https://twittercl0ne.netlify.app/home",
       gif:twitter
     },
     {
       title:"New React Clock",
-      body: `I made this new version after seeing how messy the code was on the first React Clock. I added a few more features and reimplemented
-      others in a way i found more satisfying compared to the first iteration.\n
+      body: `I made this new version after seeing how messy the code was on the first React Clock. I added a few more features and reimplemented others in a way i found more satisfying compared to the first iteration.\n
       This project helped me realize how much i have learned since i began learning react and how much different a project can turn out when you have more experience working with a framework.`,
       tech: "Made using React, React Router, Redux, Styled Components, Chakra-UI",
       url:"https://twittercl0ne.netlify.app/home",
@@ -42,27 +41,27 @@ const Projects = forwardRef((props,ref) =>{
     hidden:{opacity:0,y:-50}
   }
   return (
-    <VStack h={'fit-content'} ref={ref} alignItems={'center'} color={'#c6cfff'} justify={'center'} id="third-div">
-        <motion.div style={{width:'100%'}} variants={parent} animate={props.value === 'third-div' && 'visible'} transition={{staggerChildren:0.2, delayChildren:2}} initial={'hidden'}>
+    <VStack h={'fit-content'} ref={ref} alignItems={'center'} color={'#c6cfff'} p={{base:'100px 10px',sm:'100px 5vw'}} justify={'center'} id="projects">
+        <motion.div style={{width:'100%'}} variants={parent} animate={props.value === 'projects' && 'visible'} transition={{staggerChildren:0.2, delayChildren:2}} initial={'hidden'}>
         <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
           Projects
         </Heading>
         <br />
       {projects.map(({title,body,tech,gif,url},index) => (
         <motion.div variants={child}> 
-        <Flex direction={{base:'column',lg:index % 2 ? 'row-reverse' : 'row' }} justify={'space-around'} p={{base:'0',md:'10px'}} align={'center'}>
-          <VStack alignSelf={'center'}>
+        <Flex direction={{base:'column',lg:index % 2 ? 'row-reverse' : 'row' }} justify={'center'} p={{base:'0',md:'10px'}} align={'center'}>
+          <VStack alignSelf={'center'}  maxW={'600px'}>
             <Link href={url} target={'blank'} _hover={{textDecoration:'none'}}>
               <Heading as={'h5'} size='lg' color={'#add0ff96'}>
                 {title}
               </Heading>
             </Link>
             <Box boxShadow='md' p={'5px 10px'} h='fit-content' borderRadius={'3px'} bg={'blue.900'} maxW={'600px'}>
-              <Text fontSize={"clamp(1rem,1.5vw,1.5rem)"} whiteSpace={'pre-line'} >
+              <Text fontSize={"clamp(.8rem,2vw,1rem)"} whiteSpace={'pre-line'} >
                {body}
               </Text>  
             </Box>
-            <Text fontSize={'sm'}>
+            <Text fontSize={{base:'xs',lg:'sm'}}>
               {tech}
               </Text>
           </VStack>
@@ -96,6 +95,8 @@ const Projects = forwardRef((props,ref) =>{
           <Image  src={clock}  m={'10px'} borderRadius={'3px'} w={{base:'100%',lg:'35vw'}} maxW='700px'/>
         </Flex>
         </motion.div> */}
+        <br />
+        <br />
       </VStack>
   )
 })

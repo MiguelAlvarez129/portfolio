@@ -3,10 +3,10 @@ import { SideBarContainer, SideMenuContainer, SideMenuOptions, UnderBar } from '
 
 const SideBar = (props) =>{
   const menu = [
-    {title:"Welcome", selected:true, id:"first-div", delay:.25},
-    {title:"About Me", selected:false, id:"second-div", delay:.5},
-    {title:"Projects", selected:false, id:"third-div", delay:.75},
-    {title:"Get in Touch", selected:false, id:"fourth-div", delay:1}
+    {title:"Welcome", selected:true, id:"welcome", delay:.25},
+    {title:"About Me", selected:false, id:"about", delay:.5},
+    {title:"Projects", selected:false, id:"projects", delay:.75},
+    {title:"Get in Touch", selected:false, id:"contact", delay:1}
   ]
   const [sideMenu,setSideMenu] = useState([...menu])
 

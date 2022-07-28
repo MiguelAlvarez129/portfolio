@@ -7,6 +7,10 @@ import { AnimationContext } from '../../animationContext'
 const Layout = (props) =>{
   const [value, setValue] = useState(null)
   useEffect(() => {
+    const {hash} = window.location;
+    if (hash){
+      setValue(hash.split('#')[1])
+    }
     const observer = new IntersectionObserver(callback,{threshold:0.1,
       })
     observer.observe(ref.current.getRef1())
@@ -18,9 +22,10 @@ const Layout = (props) =>{
   const callback = (entries, observer) =>{
     const [ entry ] = entries;
     const {isVisible,isIntersecting} = entry
-    console.log(isVisible,isIntersecting)
+    // console.log(isVisible,isIntersecting)
     if (isIntersecting || isVisible){
       setValue(entry.target.id)
+  
     }
   }
   const ref = useRef(null)

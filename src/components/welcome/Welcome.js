@@ -9,11 +9,11 @@ import waveSmall from '../../assets/img/wave-small.svg'
 
 
 const Welcome = forwardRef((props,ref) =>{
-
+  
   return (
-    <WaveDiv id="first-div" ref={ref} svg={wave} smallSvg={waveSmall} >
+    <WaveDiv id="welcome" ref={ref} svg={wave} smallSvg={waveSmall} >
        <VStack justify={'center'} align={'start'} h="100vh" pl={'12vw'}>
-       <motion.div initial={{opacity:0,y:-50}} animate={props.value === 'first-div' &&  {opacity:1, y:0}} transition={{delay:.2, ease:'easeInOut'}}>
+       <motion.div initial={{opacity:0,y:-50}} animate={props.value === 'welcome' &&  {opacity:1, y:0}} transition={{delay:.2, ease:'easeInOut'}}>
           <Grid column={1}>
             <GridItem colStart={1} rowStart={1}> 
               <Heading letterSpacing={'5px'} fontSize={'clamp(4rem,6vw,7rem)'} color={'white'} position={'relative'} zIndex={6}>
@@ -33,7 +33,7 @@ const Welcome = forwardRef((props,ref) =>{
           <Heading fontSize={'clamp(2rem,4vw,5rem)'} color={'#4ba3ef99'} >
             I'm a web developer.
           </Heading>
-          <a href="#second-div">
+          <a href="#about">
             <AnimatedButton  size='lg' color='white' colorScheme='blackAlpha' border="white 2px solid" >
               Find out more!
             </AnimatedButton>
