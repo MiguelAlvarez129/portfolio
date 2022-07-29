@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { SideBarContainer, SideMenuContainer, SideMenuOptions, UnderBar } from '../../styles'
+import {motion} from 'framer-motion'
 
 const SideBar = (props) =>{
   const menu = [
@@ -18,14 +19,28 @@ const SideBar = (props) =>{
     setSideMenu([...menu1])
   }, [props.value])
 
+  const variants = {
+    visible:{transition:{staggerChildren: 0.5,}},
+  }
+
+  const childVariants = {
+    visible:{opacity:1, x:0,},
+    hidden:{opacity:0,x:-50}
+  }
+  
   return (
     <SideBarContainer>
-    <SideMenuContainer>
-      {sideMenu.map((e,index)=>
-      <SideMenuOptions key={index} href={"#" + e.id} selected={e.selected} delay={e.delay} duration={e.duration}>
-       {e.title}  
-       </SideMenuOptions>)}
-    </SideMenuContainer>
+      <motion.div variants={variants} initial={'hidden'} animate={'visible'}  style={{height:'100%'}}>
+        <SideMenuContainer>
+          {sideMenu.map((e,index)=>
+          <motion.div variants={childVariants} style={{width:'100%'}}>
+            <SideMenuOptions key={index} href={"#" + e.id} selected={e.selected} >
+            {e.title}  
+            </SideMenuOptions>
+          </motion.div>
+          )}
+        </SideMenuContainer>
+      </motion.div>
     </SideBarContainer>
   ) 
 

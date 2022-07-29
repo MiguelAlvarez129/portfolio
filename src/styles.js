@@ -121,7 +121,7 @@ export const WaveDiv = styled.div`
     font-weight: bolder;
     margin: 0;
     letter-spacing: 5px;
-    ${() => entranceAnimation({delay:1})};
+   
   }
   & h2{
     font-size:xx-large;
@@ -130,7 +130,7 @@ export const WaveDiv = styled.div`
     margin-top: 0px;
     margin-left: 30px;
     line-height: 50px;
-    ${() => entranceAnimation({delay:2})};
+  
   }
 
   @media (max-width:1250px){
@@ -180,6 +180,14 @@ export const AnimatedButton = styled(Button)`
     flex-direction:row;
     justify-content:center;
     align-items: center;
+
+    & > div{
+      padding:0px;
+    }
+  }
+
+  & > div{
+    padding:8px;
   }
   
  
@@ -188,54 +196,26 @@ export const AnimatedButton = styled(Button)`
   `
 
 
-const underAnimation = keyframes`
-from {
-  width:0;
-} 
- 
-to {
-  width: 100%;
-}
-`
 
-const animation = css`
-  animation: ${underAnimation} 
-  1s reverse forwards
-`
 
-const entrance = keyframes`
-  from { 
-    transform:translateX(-300px);
-    opacity:0 ;
-  } 
 
-  to {
-    transform:translateX(0);
-    opacity:1;
-  }
-` 
-
-const entranceAnimation = ({duration,delay}) => css`
-  animation:${entrance} .5s forwards ${delay}s;
-`
 
 export const SideMenuOptions = styled.a` 
   font-family: Raleway;
-  opacity:0;
   display:block;
   margin: 5px;
   text-decoration:none;
   text-align:end;
   color:${props => props.selected ? 'white' : '#bbbbbb'};
-  padding: 0 20px;
   width:85%;
+  margin:auto;
   font-weight:600; 
   letter-spacing: 3px;
   font-size:larger;
   text-shadow: ${props => props.selected ? '2px 2px #ce2858, 4px 2px #ce2858;' : ' 0px 0px #ce2858'};
   transition: text-shadow .5s, color .5s;
 
-  ${props => entranceAnimation(props)};
+  
   
 
   @media (max-width:1250px){

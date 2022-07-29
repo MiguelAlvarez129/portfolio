@@ -20,7 +20,6 @@ const About = forwardRef((props,ref) => {
             I began in the world of web dev back in 2018 with freecodecamp.org where i learned the basics of 
             HTML, CSS, Javascript and a bit of React. Later i decided to take my learning into a more self-taught path
             and began learning React and ExpressJS on my own. 
-            Here you can see the technlogies i have worked with:
           </Text> 
           <br />
           <Text fontSize={"clamp(1rem,1vw,1.5rem)"}   >
@@ -29,10 +28,10 @@ const About = forwardRef((props,ref) => {
             that would make me a better developer.
           </Text>
           <br />
-          <Text fontSize={{base:"md",lg:"xl"}}  >
+          <Text fontSize={"clamp(1rem,1vw,1.5rem)"}  >
           Here you can see the technlogies i have worked with:
           </Text>
-            <SimpleGrid columns={2} maxW={"300px"} gap={3} m={5} fontSize={'lg'}>
+            <SimpleGrid columns={2} maxW={"300px"} gap={3} m={5} fontSize={"clamp(1rem,1vw,1.5rem)"}>
               <GridItem colSpan={1} d={'flex'} alignItems={'center'} >
                 <BsFillCircleFill size={'10px'} color={'#ce2858'} style={{display:'inline-block',margin:"0 10px"}}/>
                 Angular
