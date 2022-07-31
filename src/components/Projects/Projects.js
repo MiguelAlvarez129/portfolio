@@ -37,7 +37,6 @@ const Projects = forwardRef((props,ref) =>{
 
   const parent = {
     visible:{transition:{staggerChildren: 0.5}},
-    hidden:{transition:{staggerChildren: 0.5}}
   }
 
   const child = {
@@ -46,7 +45,7 @@ const Projects = forwardRef((props,ref) =>{
   }
   return (
     <VStack h={'fit-content'} ref={ref} alignItems={'center'} color={'#c6cfff'} p={{base:'100px 10px',sm:'100px 5vw'}} justify={'center'} id="projects">
-        <motion.div style={{width:'100%'}} variants={parent} animate={props.value === 'projects' && 'visible'} transition={{staggerChildren:0.2, delayChildren:2}} initial={'hidden'}>
+        <motion.div style={{width:'100%'}} variants={parent} animate={props.value === 'projects' && 'visible'}  initial={'hidden'}>
         <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
           Projects
         </Heading>

@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react'
 import { AnimatedButton } from '../../styles'
-import {Box, VStack, Flex, Heading, Image, Text} from '@chakra-ui/react'
+import {Box, VStack, Flex, Heading, Image, Text, } from '@chakra-ui/react'
 import carta from '../../assets/img/carta.png'
 import {motion} from 'framer-motion'
 
@@ -15,15 +15,14 @@ const Contact = forwardRef((props,ref) => {
                         Get in Touch
                         </Heading>  
                     </Box>
-                    <Flex h={'fit-content'} w={'full'} direction={{base:'column',lg:'row'}}  p={{base:'1em',sm:'30px'}}>
-                            <VStack  w={'full'} p={'10px 20px'}  bg={'#0b0155a3'} justify={'center'} borderRadius={'4px'}>
-                                <Image  src={carta} w={'20vw'} minW={'200px'}/>
+                    <Flex h={'fit-content'} w={'full'} justify={'center'} direction={{base:'column',lg:'row'}}  p={{base:'1em',sm:'30px'}}>
+                            <VStack  w={'full'} maxW={'800px'} p={'10px 20px'}  bg={'#0b0155a3'} justify={'center'} borderRadius={'4px'}>
+                                <Image  src={carta} w={'20vw'} minW={'200px'} maxW={'400px'}/>
                                 <Text fontSize={{base:'xl',lg:'3xl'}} color={'#c6cfff'} textAlign='center'>
                                     Wanna contact me? 
                                 </Text>
-                                <Text fontSize={"clamp(1rem,1vw,1.5rem)"} color={'#c6cfff'} textAlign='center' p={{base:'10px 20px',sm:'5px 10vw'}}>
-                                    Currently i'm looking for work, so if you've got any vacancies that fit my 
-                                    profile, please send me an email so we can get in touch!
+                                <Text fontSize={"clamp(1rem,1vw,1.5rem)"} color={'#c6cfff'} textAlign='center' p={'5px 4vw'} noOfLines={3}>
+                                    Currently i'm looking for work, so if you've got any vacancies that fit my profile, please send me an email so we can get in touch!
                                 </Text>
                                 <Box>
                                 <a href="mailto:miguelalvarezunexpo@gmail.com">
