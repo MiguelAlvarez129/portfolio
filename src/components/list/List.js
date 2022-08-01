@@ -5,7 +5,6 @@ import Welcome from '../welcome/Welcome';
 import About from '../about/About';
 import Projects from '../projects/Projects'
 import Contact from '../contact/Contact';
-import wave from '../../assets/img/wave2.svg'
 import { AnimationContext } from '../../animationContext';
 const List = forwardRef((props,ref) =>{
   const value = useContext(AnimationContext)
