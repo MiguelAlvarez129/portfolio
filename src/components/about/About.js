@@ -1,11 +1,13 @@
 import React, {forwardRef} from 'react'
 import {Text, Heading, VStack, SimpleGrid, GridItem, Divider} from '@chakra-ui/react'
-import {BsCircle, BsFillCircleFill} from 'react-icons/bs'
+import { BsFillCircleFill} from 'react-icons/bs'
 import { WaveDiv } from '../../styles'
 import waveReverse from '../../assets/img/wave-reverse.svg'
 import waveSmallReverse from '../../assets/img/wave-small-reverse.svg'
 import {motion} from 'framer-motion'
 const About = forwardRef((props,ref) => {
+
+  const techs = ['Javascript ES6+','Angular','React','NodeJS','ExpressJS','PostgreSQL','MongoDB']
   return (
   <WaveDiv svg={waveReverse} smallSvg={waveSmallReverse} reverse={true}  ref={ref} id="about">
      <motion.div initial={{opacity:0,y:-50}} animate={props.value === 'about' &&  {opacity:1, y:0}} transition={{delay:.2, ease:'easeInOut'}}>
@@ -31,27 +33,13 @@ const About = forwardRef((props,ref) => {
           <Text fontSize={"clamp(1rem,1vw,1.5rem)"}  >
           Here you can see the technlogies i have worked with:
           </Text>
-            <SimpleGrid columns={2} maxW={"300px"} gap={3} m={5} fontSize={"clamp(1rem,1vw,1.5rem)"}>
-              <GridItem colSpan={1} d={'flex'} alignItems={'center'} >
-                <BsFillCircleFill size={'10px'} color={'#ce2858'} style={{display:'inline-block',margin:"0 10px"}}/>
-                Angular
-              </GridItem>
-              <GridItem colSpan={1} d={'flex'} alignItems={'center'}>
-              <BsFillCircleFill size={'10px'} color={'#ce2858'} style={{display:'inline-block',margin:"0 10px"}}/>
-                React
-              </GridItem>
-              <GridItem colSpan={1}>
-                NodeJS
-              </GridItem>
-              <GridItem colSpan={1}>
-                ExpressJS
-              </GridItem>
-              <GridItem colSpan={1}>
-                PostgreSQL
-              </GridItem>
-              <GridItem colSpan={1}>
-                MongoDB
-              </GridItem>
+            <SimpleGrid columns={3} maxW={"100%"} gap={3} m={5} fontSize={"clamp(1rem,1vw,1.5rem)"}>
+              {techs.map((e)=>(
+                   <GridItem colSpan={1} d={'flex'} alignItems={'center'} >
+                   <BsFillCircleFill size={'10px'} color={'#ce2858'} style={{display:'inline-block',margin:"0 10px"}}/>
+                   {e}
+                 </GridItem>
+              ))}
             </SimpleGrid>
         </VStack>
      </motion.div>
