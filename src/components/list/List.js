@@ -40,8 +40,8 @@ const List = forwardRef((props,ref) =>{
         <Box bg={'#ce2858'} h={'200px'} p={'100px 5vw'} >
 
           <Text color={'whiteAlpha.600'}>
-           <Link _hover={{color:'white'}} href="https://haikei.app/">Images: haikei.app </Link> &nbsp; |
-           &nbsp; <Link  _hover={{color:'white'}} href="https://github.com/MiguelAlvarez129/portfolio"> Designed and built by Miguel Alvarez  </Link> 
+           <Link _hover={{color:'white'}} href="https://haikei.app/" target={"_blank"}>Images: haikei.app </Link> &nbsp; |
+           &nbsp; <Link  _hover={{color:'white'}} href="https://github.com/MiguelAlvarez129/portfolio" target={"_blank"}> Designed and built by Miguel Alvarez  </Link> 
           </Text> 
         </Box>
     </ListContainer>
