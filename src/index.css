@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* overflow-x: hidden; */
   background:#000331 !important;
+  overflow-x: hidden;
 }
 
 code {

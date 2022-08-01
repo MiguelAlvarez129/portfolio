@@ -16,6 +16,7 @@ export const LayoutContainer = styled.div`
 `
 
 export const SideBarContainer = styled.div`
+  box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
   position: fixed;
   flex:none;
   height:100vh;
@@ -110,7 +111,6 @@ export const WaveDiv = styled.div`
 
   export const HelloDiv = styled.div`
   position: absolute;
-
   overflow-wrap: break-word;
   height:100px;
   bottom: 60%; 
@@ -180,7 +180,8 @@ export const AnimatedButton = styled(Button)`
     flex-direction:row;
     justify-content:center;
     align-items: center;
-
+    height:100%;
+    top:0;
     & > div{
       padding:0px;
     }
@@ -189,16 +190,7 @@ export const AnimatedButton = styled(Button)`
   & > div{
     padding:8px;
   }
-  
- 
-
-
   `
-
-
-
-
-
 
 export const SideMenuOptions = styled.a` 
   font-family: Raleway;
@@ -214,9 +206,6 @@ export const SideMenuOptions = styled.a`
   font-size:larger;
   text-shadow: ${props => props.selected ? '2px 2px #ce2858, 4px 2px #ce2858;' : ' 0px 0px #ce2858'};
   transition: text-shadow .5s, color .5s;
-
-  
-  
 
   @media (max-width:1250px){
     animation:none;
@@ -245,6 +234,5 @@ export const TextShadow = styled.span`
     position: relative;
     z-index:-1
   }
-
 `
 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { SideBarContainer, SideMenuContainer, SideMenuOptions, UnderBar } from '../../styles'
+import { SideBarContainer, SideMenuContainer, SideMenuOptions } from '../../styles'
 import {motion} from 'framer-motion'
 
 const SideBar = (props) =>{
@@ -20,7 +20,7 @@ const SideBar = (props) =>{
   }, [props.value])
 
   const variants = {
-    visible:{transition:{staggerChildren: 0.5,}},
+    visible:{transition:{staggerChildren: .5,delayChildren:1.2}},
   }
 
   const childVariants = {
@@ -29,19 +29,21 @@ const SideBar = (props) =>{
   }
   
   return (
-    <SideBarContainer>
-      <motion.div variants={variants} initial={'hidden'} animate={'visible'}  style={{height:'100%'}}>
-        <SideMenuContainer>
-          {sideMenu.map((e,index)=>
-          <motion.div variants={childVariants} style={{width:'100%'}}>
-            <SideMenuOptions key={index} href={"#" + e.id} selected={e.selected} >
-            {e.title}  
-            </SideMenuOptions>
-          </motion.div>
-          )}
-        </SideMenuContainer>
-      </motion.div>
-    </SideBarContainer>
+    <motion.div initial={{x:-300}} animate={{x:0}} transition={{type: "spring", delay:.2}} > 
+      <SideBarContainer>
+        <motion.div variants={variants} initial={'hidden'} animate={'visible'}  style={{height:'100%'}}>
+          <SideMenuContainer>
+            {sideMenu.map((e,index)=>
+            <motion.div variants={childVariants} style={{width:'100%'}}>
+              <SideMenuOptions key={index} href={"#" + e.id} selected={e.selected} >
+              {e.title}  
+              </SideMenuOptions>
+            </motion.div>
+            )}
+          </SideMenuContainer>
+        </motion.div>
+      </SideBarContainer>
+    </motion.div>
   ) 
 
 }

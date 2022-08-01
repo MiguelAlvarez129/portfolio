@@ -4,7 +4,8 @@ import clock from '../../assets/gif/clock.gif'
 import newClock from '../../assets/gif/new-clock.gif'
 import twitter from '../../assets/gif/twitter.gif'
 import {motion} from 'framer-motion'
-import { DiGithubBadge, DiGithubAlt} from "react-icons/di";
+import {  DiGithubAlt} from "react-icons/di";
+
 const Projects = forwardRef((props,ref) =>{
 
   const projects = [
@@ -36,7 +37,7 @@ const Projects = forwardRef((props,ref) =>{
   ]
 
   const parent = {
-    visible:{transition:{staggerChildren: 0.5}},
+    visible:{transition:{staggerChildren: .5,delayChildren:.5}},
   }
 
   const child = {
@@ -44,7 +45,7 @@ const Projects = forwardRef((props,ref) =>{
     hidden:{opacity:0,y:-50}
   }
   return (
-    <VStack h={'fit-content'} ref={ref} alignItems={'center'} color={'#c6cfff'} p={{base:'100px 10px',sm:'100px 5vw'}} justify={'center'} id="projects">
+    <VStack h={'fit-content'}  ref={ref} alignItems={'center'} color={'#c6cfff'} p={{base:'100px 10px',sm:'100px 5vw'}} justify={'center'} id="projects">
         <motion.div style={{width:'100%'}} variants={parent} animate={props.value === 'projects' && 'visible'}  initial={'hidden'}>
         <Heading as={'h3'} size='xl' color={'#add0ff96'} alignSelf={'start'}>
           Projects

@@ -1,11 +1,11 @@
 import React,{useRef, forwardRef,useImperativeHandle, useContext} from 'react'
-import {Divider , Text, Heading, VStack, Box, SimpleGrid, GridItem} from '@chakra-ui/react'
-import { ListContainer, ColorDiv, Footer } from '../../styles';
+import {Box, Text, Link} from '@chakra-ui/react'
+import { ListContainer} from '../../styles';
 import Welcome from '../welcome/Welcome';
 import About from '../about/About';
 import Projects from '../projects/Projects'
 import Contact from '../contact/Contact';
-import confetti from '../../assets/img/confetti2.svg'
+import wave from '../../assets/img/wave2.svg'
 import { AnimationContext } from '../../animationContext';
 const List = forwardRef((props,ref) =>{
   const value = useContext(AnimationContext)
@@ -37,11 +37,13 @@ const List = forwardRef((props,ref) =>{
         <About ref={ref2} value={value}/>
         <Projects ref={ref3} value={value}/>
         <Contact ref={ref4} value={value}/> 
-        <Footer>
-          <p style={{color:"#cf8eff"}}>
-          Images: <a href="https://haikei.app/"> haikei.app</a> &nbsp; | &nbsp;  Design: Myself
-          </p> 
-        </Footer>
+        <Box bg={'#ce2858'} h={'200px'} p={'100px 5vw'} >
+
+          <Text color={'whiteAlpha.600'}>
+           <Link _hover={{color:'white'}} href="https://haikei.app/">Images: haikei.app </Link> &nbsp; |
+           &nbsp; <Link  _hover={{color:'white'}} href="https://github.com/MiguelAlvarez129/portfolio"> Designed and built by Miguel Alvarez  </Link> 
+          </Text> 
+        </Box>
     </ListContainer>
   )
 })
