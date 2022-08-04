@@ -6,7 +6,7 @@ import { AnimationContext } from '../../animationContext'
 import Intro from '../intro/Intro'
 
 const Layout = (props) =>{
-  const [intro, setIntro] = useState(false)
+  const [intro, setIntro] = useState(true)
   const [value, setValue] = useState(null)
   useEffect(() => {
     setTimeout(() => {

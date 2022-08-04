@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const Intro = () => {
   const color1 = "#002468"
   const color2 = "#000331"
-  //#ce2858" 
+
   const variants = {
     visible:{ 
       x:['-30%','0%','30%'],
@@ -15,9 +15,8 @@ const Intro = () => {
       transition:{
         duration: .9, 
         ease:'linear',
-        repeat: "Infinity",
-
-
+        repeat: 2,
+        repeatDelay:1,
       }
     },
   }
@@ -32,7 +31,7 @@ const Intro = () => {
     <Center h={'100vh'} bg={color2}>
       <motion.div  variants={parent} animate={'visible'} > 
         {letter.split('').map((e)=>(
-          <motion.div variants={variants} style={{fontSize:'clamp(1rem,9vw,10rem)',letterSpacing:'1rem' , textShadow:'0 15px 40px rgb(0,0,0)',fontWeight:"bolder",display:'block'}}> 
+          <motion.div variants={variants} style={{fontSize:'clamp(1rem,5vw,10rem)',letterSpacing:'1rem' ,fontWeight:"bolder",display:'inline-block'}}> 
           {e} 
           </motion.div>
         ))}
