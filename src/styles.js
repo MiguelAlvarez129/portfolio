@@ -1,12 +1,8 @@
-import { Button, Text } from '@chakra-ui/react'
-import styled, {css} from 'styled-components'
+import { Button } from '@chakra-ui/react'
+import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 import zigzag from '../src/assets/img/zig-zag.svg'
-// import wave from '../src/assets/img/wave.svg'
-import wave from '../src/assets/img/wave2.svg'
-import waveReverse from '../src/assets/img/wave-reverse.svg'
-import waveSmall from '../src/assets/img/wave-small.svg'
-import waveSmallReverse from '../src/assets/img/wave-small-reverse.svg'
+
 
 const sideBarBg = '#000224'
 const sidebarW = '300px'

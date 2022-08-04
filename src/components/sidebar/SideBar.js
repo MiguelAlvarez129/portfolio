@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { SideBarContainer, SideMenuContainer, SideMenuOptions } from '../../styles'
 import {motion} from 'framer-motion'
+import { useMediaQuery } from '@chakra-ui/react'
 
 const SideBar = (props) =>{
   const menu = [
@@ -9,7 +10,9 @@ const SideBar = (props) =>{
     {title:"Projects", selected:false, id:"projects", delay:.75},
     {title:"Get in Touch", selected:false, id:"contact", delay:1}
   ]
+
   const [sideMenu,setSideMenu] = useState([...menu])
+  const [isLowerThan1250] = useMediaQuery('(max-width:1250px)')
 
   useEffect(() => {
     const menu1 = sideMenu.map((e)=>{
@@ -17,15 +20,18 @@ const SideBar = (props) =>{
       else return {...e,selected:false}
     })
     setSideMenu([...menu1])
-  }, [props.value])
+  }, [props.value,sideMenu])
 
   const variants = {
     visible:{transition:{staggerChildren: .5,delayChildren:1.2}},
   }
 
-  const childVariants = {
+  const childVariants = !isLowerThan1250 ? {
     visible:{opacity:1, x:0,},
     hidden:{opacity:0,x:-50}
+  } :  {
+    visible:{opacity:1, y:0,},
+    hidden:{opacity:0,y:-50}
   }
   
   return (

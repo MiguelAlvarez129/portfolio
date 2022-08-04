@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react'
-import {Text, Heading, VStack, SimpleGrid, GridItem, Divider} from '@chakra-ui/react'
+import {Text, Heading, VStack, SimpleGrid, GridItem} from '@chakra-ui/react'
 import { BsFillCircleFill} from 'react-icons/bs'
 import { WaveDiv } from '../../styles'
 import waveReverse from '../../assets/img/wave-reverse.svg'
@@ -27,11 +27,11 @@ const About = forwardRef((props,ref) => {
           <Text fontSize={"clamp(1rem,1vw,1.5rem)"}   >
             Currently i work with technologies such as Angular, React, and Expressjs and db platforms such as MongoDB and 
             PostgreSQL. I always look forward to broaden my spectrum regarding web development and learning new things
-            that would make me a better developer.
+            that will help improve as a developer.
           </Text>
           <br />
           <Text fontSize={"clamp(1rem,1vw,1.5rem)"}  >
-          Here you can see the technlogies i have worked with:
+          Here you can see the technologies i have worked with:
           </Text>
             <SimpleGrid columns={3} maxW={"100%"} gap={3} m={5} fontSize={"clamp(1rem,1vw,1.5rem)"}>
               {techs.map((e)=>(
