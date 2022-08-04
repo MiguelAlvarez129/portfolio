@@ -9,9 +9,9 @@ const Layout = (props) =>{
   const [intro, setIntro] = useState(true)
   const [value, setValue] = useState(null)
   useEffect(() => {
-    // setTimeout(() => {
-    //   setIntro(false)
-    // }, 5000);
+    setTimeout(() => {
+      setIntro(false)
+    }, 6000);
     if (!intro){
       const {hash} = window.location;
       if (hash){
