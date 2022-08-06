@@ -8,7 +8,7 @@ const Intro = () => {
 
   const variants = {
     visible:{ 
-      x:['-33%','33%'],
+      x:['-33%','0%','33%'],
       color: [color2, '#ce2858',color2],
 
       textShadow:['0 0px 0px rgba(0,0,0,0)','0 15px 40px rgba(0,0,0,255)','0 0px 0px rgba(0,0,0,0)'],
