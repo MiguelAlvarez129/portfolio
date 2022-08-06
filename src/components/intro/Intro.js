@@ -8,15 +8,15 @@ const Intro = () => {
 
   const variants = {
     visible:{ 
-      x:['-30%','0%','30%'],
-      color: [color2, color1,color2],
+      x:['-33%','33%'],
+      color: [color2, '#ce2858',color2],
 
       textShadow:['0 0px 0px rgba(0,0,0,0)','0 15px 40px rgba(0,0,0,255)','0 0px 0px rgba(0,0,0,0)'],
       transition:{
-        duration: .9, 
+        duration: .8, 
         ease:'linear',
-        repeat: 2,
-        repeatDelay:1,
+        repeat: 1,
+        repeatDelay:1.2,
       }
     },
   }

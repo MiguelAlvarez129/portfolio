@@ -11,7 +11,7 @@ const Layout = (props) =>{
   useEffect(() => {
     setTimeout(() => {
       setIntro(false)
-    }, 6000);
+    }, 4400);
     if (!intro){
       const {hash} = window.location;
       if (hash){
