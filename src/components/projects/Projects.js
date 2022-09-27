@@ -30,7 +30,7 @@ const Projects = forwardRef((props,ref) =>{
       body: `I made this new version after seeing how messy the code was on the first React Clock. I added a few more features and reimplemented others in a way i found more satisfying compared to the first iteration.\n
       This project helped me realize how much i have learned since i began learning react and how much different a project can turn out when you have more experience working with a framework.`,
       tech: "Made using React, React Router, Redux, Styled Components, Chakra-UI",
-      url:"https://twittercl0ne.netlify.app/home",
+      url:"https://new-clock.onrender.com",
       gif:newClock,
       github:'https://github.com/MiguelAlvarez129/new-clock/',
     },
