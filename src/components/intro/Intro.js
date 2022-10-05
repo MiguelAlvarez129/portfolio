@@ -31,7 +31,7 @@ const Intro = () => {
     <Center h={'100vh'} bg={color2}>
       <motion.div  variants={parent} animate={'visible'} > 
         {letter.split('').map((e)=>(
-          <motion.div variants={variants} style={{fontSize:'clamp(1rem,5vw,10rem)',letterSpacing:'1rem' ,fontWeight:"bolder",display:'inline-block'}}> 
+          <motion.div variants={variants} style={{fontSize:'clamp(1rem,5vw,10rem)',letterSpacing:'1.2rem' ,fontWeight:"bolder",display:'inline-block'}}> 
           {e} 
           </motion.div>
         ))}
